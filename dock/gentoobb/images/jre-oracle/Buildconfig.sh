@@ -8,6 +8,8 @@ PACKAGES="dev-java/oracle-jre-bin"
 #
 configure_rootfs_build()
 {
+    update_use 'dev-java/oracle-jre-bin' '+jce'
+
     # download oracle jre bin
     JRE_URL=http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jre-8u40-linux-x64.tar.gz
     #JRE_TAR=$(emerge -pf oracle-jre-bin 2>&1 >/dev/null | grep -m1 "jre-[0-9a-z]*-linux-x64\.tar\.gz")
@@ -21,6 +23,16 @@ configure_rootfs_build()
             -P /distfiles \
             "${JRE_URL}"
     fi
+
+    JCE_URL=http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip
+    JCE_ZIP=jce_policy-8.zip
+    if [ ! -f /distfiles/${JCE_ZIP} ]; then
+        wget --no-cookies --no-check-certificate \
+            --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
+            -P /distfiles \
+            "${JCE_URL}"
+    fi
+
     # skip python and iced-tea
     provide_package dev-lang/python dev-java/icedtea-bin
 }
