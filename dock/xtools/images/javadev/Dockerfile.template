@@ -1,0 +1,13 @@
+FROM gentoobb/jdk-oracle
+MAINTAINER ${MAINTAINER}
+
+ADD rootfs.tar /
+
+RUN mkdir /home
+RUN useradd -ms /bin/zsh user
+
+USER user
+ENV HOME /home/user
+
+VOLUME /home/user
+

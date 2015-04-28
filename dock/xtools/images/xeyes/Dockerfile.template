@@ -1,9 +1,7 @@
-FROM gentoobb/python2
+FROM gentoobb/bash
 MAINTAINER ${MAINTAINER}
 
 ADD rootfs.tar /
-
-RUN pip install awscli
 
 RUN mkdir /home
 RUN useradd -ms /bin/bash user
@@ -11,5 +9,7 @@ RUN useradd -ms /bin/bash user
 USER user
 ENV HOME /home/user
 
-VOLUME /home/user/.aws
+ENV DISPLAY :0
+CMD xeyes
+
 
