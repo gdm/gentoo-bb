@@ -1,0 +1,4 @@
+FROM gentoobb/bash
+MAINTAINER ${MAINTAINER}
+
+ADD rootfs.tar /

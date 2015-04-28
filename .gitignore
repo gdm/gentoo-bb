@@ -8,4 +8,4 @@ dock/*/builder/PACKAGES.md
 dock/*
 !dock/gentoobb
 !dock/dummy
-
+!dock/xtools
