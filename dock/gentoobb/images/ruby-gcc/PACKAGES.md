@@ -1,7 +1,7 @@
-### gentoobb/ruby-gcc:20150409
-Built: Mon Apr 13 22:29:09 CEST 2015
+### gentoobb/ruby-gcc:20150423
+Built: Mon Apr 27 23:54:30 CEST 2015
 
-Image Size: 153 MB
+Image Size: 156.1 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -25,7 +25,7 @@ dev-libs/gmp-5.1.3-r1 | `cxx -doc -pgo -static-libs`
 dev-libs/mpc-1.0.1 | `-static-libs`
 dev-libs/mpfr-3.1.2-r1 | `-static-libs`
 sys-devel/binutils-2.24-r3 | `cxx nls zlib (-multislot) -multitarget -static-libs {-test} -vanilla`
-sys-devel/binutils-config-3-r3 | ``
+sys-devel/binutils-config-4-r2 | ``
 sys-devel/gcc-4.8.4 | `cxx hardened nls nptl openmp (-altivec) (-awt) -doc (-fixed-point) -fortran -gcj -go -graphite (-libssp) -mudflap (-multilib) (-multislot) -nopie -nossp -objc -objc`
 sys-devel/gcc-config-1.7.3 | ``
 sys-devel/make-4.1-r1 | `nls -guile -static`
@@ -33,7 +33,7 @@ sys-kernel/linux-headers-3.18 | ``
 **FROM gentoobb/bash** |
 app-admin/eselect-1.4.4 | `-doc -emacs -vim-syntax`
 app-shells/bash-4.2_p53 | `net nls (readline) -afs -bashlogger -examples -mem-scramble -plugins -vanilla`
-net-misc/curl-7.39.0 | `ssl threads -adns -idn -ipv6 -kerberos -ldap -metalink -rtmp -ssh -static-libs {-test}`
+net-misc/curl-7.42.0 | `ssl threads -adns -idn -ipv6 -kerberos -ldap -metalink -rtmp -samba -ssh -static-libs {-test}`
 sys-apps/file-5.22 | `zlib -python -static-libs`
 sys-apps/sed-4.2.1-r1 | `acl nls (-selinux) -static`
 sys-libs/ncurses-5.9-r3 | `cxx unicode -ada -debug -doc -gpm -minimal -profile -static-libs -tinfo -trace`
@@ -54,7 +54,7 @@ sys-apps/s6-2.1.3.0 | `-static`
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015a | `nls -right`
+sys-libs/timezone-data-2015b | `nls -right`
 #### Purged
 - [ ] Headers
 - [x] Static Libs

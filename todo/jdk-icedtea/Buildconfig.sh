@@ -1,15 +1,19 @@
 #
 # build config
 #
-PACKAGES="dev-java/icedtea-bin"
+PACKAGES="dev-java/icedtea"
 
 #
 # this method runs in the bb builder container just before starting the build of the rootfs
 #
 configure_rootfs_build()
 {
+    echo 'PYTHON_TARGETS="python2_7 python3_4"' >> /etc/portage/make.conf
+
     # skip python
     provide_package dev-lang/python
+
+    update_keywords 'dev-java/icedtea' '+~amd64'
 }
 
 #

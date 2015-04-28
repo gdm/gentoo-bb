@@ -1,7 +1,7 @@
-### gentoobb/nodejs:20150409
-Built: Mon Apr 13 22:40:05 CEST 2015
+### gentoobb/nodejs:20150423
+Built: Tue Apr 28 01:09:50 CEST 2015
 
-Image Size: 33.44 MB
+Image Size: 33.83 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -25,7 +25,7 @@ sys-apps/s6-2.1.3.0 | `-static`
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015a | `nls -right`
+sys-libs/timezone-data-2015b | `nls -right`
 #### Purged
 - [x] Headers
 - [x] Static Libs
