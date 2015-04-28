@@ -1,7 +1,7 @@
 ### gentoobb/docker-registry:20150409
-Built: Mon Apr 13 22:21:48 CEST 2015
+Built: Tue Apr 21 13:03:13 CEST 2015
 
-Image Size: 135 MB
+Image Size: 135.5 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -12,7 +12,7 @@ dev-python/backports-lzma-0.0.3 | ` `
 dev-python/blinker-1.3 | `-doc {-test}`
 dev-python/boto-2.35.1 | `{-test}`
 dev-python/chardet-2.2.1 | ` `
-dev-python/flask-0.10.1-r1 | `-examples {-test}`
+dev-python/flask-0.10.1-r1 | `-examples`
 dev-python/flask-cors-1.9.0 | `-doc {-test}`
 dev-python/gevent-1.0.1 | `-doc -examples`
 dev-python/greenlet-0.4.5 | `-doc`
@@ -23,7 +23,7 @@ dev-python/markupsafe-0.23 | ` `
 dev-python/pyasn1-0.1.7 | `-doc`
 dev-python/pyyaml-3.11 | `-examples -libyaml`
 dev-python/redis-py-2.10.3 | `{-test}`
-dev-python/requests-2.3.0 | ` `
+dev-python/requests-2.6.0 | ` `
 dev-python/rsa-3.1.4-r1 | `{-test}`
 dev-python/simplejson-3.6.4 | ` `
 dev-python/six-1.8.0 | `-doc {-test}`
@@ -36,11 +36,11 @@ net-dns/c-ares-1.10.0-r1 | `-static-libs`
 Package | USE Flags
 --------|----------
 **FROM gentoobb/python2** |
-app-admin/eselect-python-20111108 | ``
 app-admin/python-updater-0.11 | ``
 app-arch/bzip2-1.0.6-r6 | `-static -static-libs`
+app-eselect/eselect-python-20111108 | ``
 app-misc/mime-types-9 | ``
-dev-db/sqlite-3.8.7.4 | `readline -debug -doc -icu -secure-delete -static-libs -tcl {-test}`
+dev-db/sqlite-3.8.9 | `readline -debug -doc -icu -secure-delete -static-libs -tcl {-test}`
 dev-lang/python-2.7.9-r1 | `hardened readline sqlite ssl threads (wide-unicode) xml -berkdb -build -doc -examples -gdbm -ipv6 -ncurses -tk -wininst`
 dev-lang/python-exec-2.0.1-r1 | ` `
 dev-libs/expat-2.1.0-r4 | `unicode -examples -static-libs`
@@ -71,7 +71,7 @@ sys-apps/s6-2.1.3.0 | `-static`
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015a | `nls -right`
+sys-libs/timezone-data-2015b | `nls -right`
 #### Purged
 - [x] Headers
 - [x] Static Libs

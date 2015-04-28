@@ -1,7 +1,7 @@
 ### gentoobb/mysql:20150409
-Built: Mon Apr 13 22:34:59 CEST 2015
+Built: Tue Apr 21 13:35:04 CEST 2015
 
-Image Size: 194.8 MB
+Image Size: 193.9 MB
 #### Installed
 Package | USE Flags
 --------|----------

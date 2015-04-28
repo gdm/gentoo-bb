@@ -1,7 +1,7 @@
 ### gentoobb/jdk-icedtea:20150409
-Built: Mon Apr 13 22:25:52 CEST 2015
+Built: Tue Apr 21 13:33:28 CEST 2015
 
-Image Size: 223.6 MB
+Image Size: 225.6 MB
 #### Installed
 Package | USE Flags
 --------|----------

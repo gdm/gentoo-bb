@@ -1,7 +1,7 @@
 ### gentoobb/s6:20150409
-Built: Mon Apr 13 22:17:07 CEST 2015
+Built: Tue Apr 21 13:00:28 CEST 2015
 
-Image Size: 9.93 MB
+Image Size: 9.96 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -15,7 +15,7 @@ Package | USE Flags
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015a | `nls -right`
+sys-libs/timezone-data-2015b | `nls -right`
 
 #### Purged
 - [x] Headers

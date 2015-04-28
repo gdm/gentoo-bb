@@ -1,7 +1,7 @@
 ### gentoobb/log-collector:20150409
-Built: Mon Apr 13 22:30:37 CEST 2015
+Built: Tue Apr 21 13:34:47 CEST 2015
 
-Image Size: 178.3 MB
+Image Size: 180.2 MB
 #### Installed
 Package | USE Flags
 --------|----------

@@ -1,7 +1,7 @@
 ### gentoobb/elasticsearch:20150409
-Built: Mon Apr 13 22:23:50 CEST 2015
+Built: Tue Apr 21 13:33:22 CEST 2015
 
-Image Size: 273.4 MB
+Image Size: 273.9 MB
 #### Installed
 Package | USE Flags
 --------|----------

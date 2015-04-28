@@ -1,7 +1,7 @@
 ### gentoobb/memcache:20150409
-Built: Mon Apr 13 22:33:23 CEST 2015
+Built: Tue Apr 21 13:34:57 CEST 2015
 
-Image Size: 77.68 MB
+Image Size: 78.52 MB
 #### Installed
 Package | USE Flags
 --------|----------
