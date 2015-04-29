@@ -7,7 +7,11 @@ RUN mkdir /home
 RUN useradd -ms /bin/zsh user
 
 USER user
+
+ENV DISPLAY :0
 ENV HOME /home/user
+
+COPY ij.sh /home/ij.sh
 
 VOLUME /home/user
 
