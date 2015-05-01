@@ -1,7 +1,7 @@
 ### xtools/javadev:20150423
-Built: Wed Apr 29 01:57:02 CEST 2015
+Built: Wed Apr 29 10:07:32 CEST 2015
 
-Image Size: 639.8 MB
+Image Size: 639.6 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -32,6 +32,7 @@ sys-libs/cracklib-2.9.1-r1 | `nls zlib -python -static-libs {-test}`
 sys-libs/ncurses-5.9-r3 | `cxx unicode -ada -debug -doc -gpm -minimal -profile -static-libs -tinfo -trace`
 sys-libs/readline-6.2_p5-r1 | `-static-libs`
 sys-libs/zlib-1.2.8-r1 | `-minizip -static-libs`
+x11-apps/xprop-1.2.2 | ``
 x11-libs/libICE-1.0.9 | `-doc -ipv6 -static-libs`
 x11-libs/libSM-1.2.2-r1 | `uuid -doc -ipv6 -static-libs`
 x11-libs/libX11-1.6.2 | `-doc -ipv6 -static-libs {-test}`
@@ -45,6 +46,7 @@ x11-libs/libXt-1.1.4 | `-static-libs`
 x11-libs/libXtst-1.2.2 | `-doc -static-libs`
 x11-libs/libxcb-1.11-r1 | `-doc (-selinux) -static-libs {-test} -xkb`
 x11-libs/xtrans-1.3.5 | `-doc`
+x11-misc/wmname-0.1 | ``
 x11-proto/fixesproto-5.0-r1 | ``
 x11-proto/inputproto-2.3.1 | ``
 x11-proto/kbproto-1.0.6-r1 | ``
