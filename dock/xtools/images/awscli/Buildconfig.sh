@@ -1,7 +1,7 @@
 #
 # build config
 #
-PACKAGES="dev-python/pip sys-apps/shadow"
+PACKAGES="sys-apps/groff app-editors/vim"
 #KEEP_HEADERS=true
 
 #
@@ -9,9 +9,7 @@ PACKAGES="dev-python/pip sys-apps/shadow"
 #
 configure_rootfs_build()
 {
-    echo 'PYTHON_TARGETS="python2_7"' >> /etc/portage/make.conf
-    echo 'PYTHON_SINGLE_TARGET="python2_7"' >> /etc/portage/make.conf
-    echo 'USE_PYTHON="2.7"' >> /etc/portage/make.conf
+  :
 }
 
 #

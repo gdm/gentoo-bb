@@ -5,11 +5,7 @@ ADD rootfs.tar /
 
 RUN pip install awscli
 
-RUN mkdir /home
-RUN useradd -ms /bin/bash user
+RUN mkdir -p /home
 
-USER user
-ENV HOME /home/user
 
-VOLUME /home/user/.aws
 
