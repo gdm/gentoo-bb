@@ -1,0 +1,17 @@
+FROM ${NAMESPACE}/bash
+MAINTAINER ${MAINTAINER}
+
+ADD rootfs.tar /
+
+ADD etc /etc
+
+
+RUN chmod +x $(find /etc/service -name run) && \
+    ln -s /etc/s6_finish_default /etc/service/exim/finish && \
+    ln -s /etc/service/exim /service
+
+EXPOSE 25 587 143
+
+#CMD ["/bin/s6-svscan", "-t0", "/service"]
+
+
