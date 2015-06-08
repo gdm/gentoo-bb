@@ -1,10 +1,13 @@
-### gentoobb/bob-uclibc:20150423
-Built: Mon Apr 27 03:15:17 CEST 2015
+### gentoobb/bob-uclibc:20150604
+Built: Mon Jun  8 16:20:04 CEST 2015
 
-Image Size: 1.302 GB
+Image Size: 1.368 GB
 #### Installed
 None.
 #### Inherited
 Package | USE Flags
 --------|----------
 **FROM scratch** |
+#### Purged
+- [x] Headers
+- [x] Static Libs
