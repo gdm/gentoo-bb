@@ -1,7 +1,7 @@
-### gentoobb/nginx-php5.5:20150423
-Built: Tue Apr 28 01:06:56 CEST 2015
+### gentoobb/nginx-php5.5:20150507
+Built: Mon May 11 21:57:03 CEST 2015
 
-Image Size: 89.35 MB
+Image Size: 87.96 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -13,7 +13,7 @@ dev-libs/expat-2.1.0-r4 | `unicode -examples -static-libs`
 dev-libs/gmp-5.1.3-r1 | `cxx -doc -pgo -static-libs`
 dev-libs/libmcrypt-2.5.8-r2 | ``
 dev-libs/libpthread-stubs-0.3-r1 | `-static-libs`
-dev-libs/libtasn1-4.4 | `-doc -static-libs`
+dev-libs/libtasn1-4.5 | `-doc -static-libs`
 dev-libs/libxml2-2.9.2-r1 | `readline -debug -examples -icu -ipv6 -lzma -python -static-libs {-test}`
 dev-libs/nettle-2.7.1-r1 | `gmp -doc (-neon) -static-libs {-test}`
 dev-libs/oniguruma-5.9.5 | `-combination-explosion-check -crnl-as-line-terminator -static-libs`
@@ -26,8 +26,8 @@ mail-mta/nullmailer-1.13-r5 | `ssl`
 media-libs/libjpeg-turbo-1.3.1 | `-java -static-libs`
 media-libs/libpng-1.6.16 | `-apng (-neon) -static-libs`
 net-dns/libidn-1.29 | `nls -doc -emacs -java -mono -static-libs`
-net-libs/gnutls-3.3.10-r2 | `crywrap cxx nls zlib -dane -doc -examples -guile -pkcs11 -static-libs {-test}`
-net-misc/curl-7.42.0 | `ssl threads -adns -idn -ipv6 -kerberos -ldap -metalink -rtmp -samba -ssh -static-libs {-test}`
+net-libs/gnutls-3.3.15 | `crywrap cxx nls openssl zlib -dane -doc -examples -guile -pkcs11 -static-libs {-test}`
+net-misc/curl-7.42.1 | `ssl threads -adns -idn -ipv6 -kerberos -ldap -metalink -rtmp -samba -ssh -static-libs {-test}`
 sys-apps/file-5.22 | `zlib -python -static-libs`
 sys-apps/sed-4.2.1-r1 | `acl nls (-selinux) -static`
 sys-apps/shadow-4.1.5.1-r1 | `acl cracklib nls xattr -audit -pam (-selinux) -skey`
@@ -57,7 +57,7 @@ Package | USE Flags
 --------|----------
 **FROM gentoobb/nginx** |
 app-arch/bzip2-1.0.6-r6 | `-static -static-libs`
-dev-libs/libpcre-8.35 | `bzip2 cxx recursion-limit (unicode) zlib -jit -libedit -pcre16 -pcre32 -readline -static-libs`
+dev-libs/libpcre-8.36 | `bzip2 cxx recursion-limit (unicode) zlib -jit -libedit -pcre16 -pcre32 -readline -static-libs`
 www-servers/nginx-1.7.6 | `http http-cache pcre ssl -aio -debug -ipv6 -libatomic -luajit -pcre-jit -rtmp (-selinux) -vim-syntax`
 **FROM gentoobb/openssl** |
 app-misc/ca-certificates-20140927.3.17.2 | `cacert`
@@ -76,6 +76,8 @@ sys-apps/s6-2.1.3.0 | `-static`
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
 sys-libs/timezone-data-2015b | `nls -right`
+**FROM gentoobb/busybox** |
+sys-apps/busybox-1.23.1-r1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
 #### Purged
 - [x] Headers
 - [x] Static Libs

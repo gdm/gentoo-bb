@@ -1,7 +1,7 @@
-### gentoobb/nodejs:20150423
-Built: Tue Apr 28 01:09:50 CEST 2015
+### gentoobb/nodejs:20150507
+Built: Mon May 11 21:58:53 CEST 2015
 
-Image Size: 33.83 MB
+Image Size: 33.44 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -26,6 +26,8 @@ sys-apps/s6-2.1.3.0 | `-static`
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
 sys-libs/timezone-data-2015b | `nls -right`
+**FROM gentoobb/busybox** |
+sys-apps/busybox-1.23.1-r1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
 #### Purged
 - [x] Headers
 - [x] Static Libs
