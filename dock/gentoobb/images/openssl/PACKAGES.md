@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ### gentoobb/openssl:20150423
 Built: Mon Apr 27 03:27:51 CEST 2015
+=======
+### gentoobb/openssl:20150507
+Built: Mon May 11 21:38:36 CEST 2015
+>>>>>>> upstream/master
 
 Image Size: 19.93 MB
 #### Installed
@@ -24,6 +29,11 @@ sys-apps/s6-2.1.3.0 | `-static`
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
 sys-libs/timezone-data-2015b | `nls -right`
+<<<<<<< HEAD
+=======
+**FROM gentoobb/busybox** |
+sys-apps/busybox-1.23.1-r1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
+>>>>>>> upstream/master
 #### Purged
 - [x] Headers
 - [x] Static Libs
