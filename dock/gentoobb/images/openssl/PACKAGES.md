@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-### gentoobb/openssl:20150423
-Built: Mon Apr 27 03:27:51 CEST 2015
-=======
-### gentoobb/openssl:20150507
-Built: Mon May 11 21:38:36 CEST 2015
->>>>>>> upstream/master
+### gentoobb/openssl:20150604
+Built: Thu Jun 11 11:25:05 CEST 2015
 
 Image Size: 19.93 MB
 #### Installed
 Package | USE Flags
 --------|----------
 app-misc/ca-certificates-20140927.3.17.2 | `cacert`
-dev-libs/openssl-1.0.1l-r1 | `bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -static-libs {-test} -vanilla`
+dev-libs/openssl-1.0.1m | `bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -static-libs {-test} -vanilla`
 sys-apps/acl-2.2.52-r1 | `nls -static-libs`
 sys-apps/attr-2.4.47-r1 | `nls -static-libs`
 sys-apps/coreutils-8.21 | `acl nls (xattr) -caps -gmp (-selinux) -static -vanilla`
@@ -29,11 +24,8 @@ sys-apps/s6-2.1.3.0 | `-static`
 sys-apps/gentoo-functions-0.8 | ``
 sys-libs/glibc-2.20-r2 | `hardened -debug -gd (-multilib) -nscd -profile (-selinux) -suid -systemtap -vanilla`
 sys-libs/timezone-data-2015b | `nls -right`
-<<<<<<< HEAD
-=======
 **FROM gentoobb/busybox** |
 sys-apps/busybox-1.23.1-r1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
->>>>>>> upstream/master
 #### Purged
 - [x] Headers
 - [x] Static Libs

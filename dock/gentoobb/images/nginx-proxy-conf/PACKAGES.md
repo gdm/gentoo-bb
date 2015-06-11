@@ -1,5 +1,5 @@
-### gentoobb/nginx-proxy-conf:20150507
-Built: Mon May 11 21:58:15 CEST 2015
+### gentoobb/nginx-proxy-conf:20150604
+Built: Thu Jun 11 12:56:23 CEST 2015
 
 Image Size: 18.86 MB
 #### Installed
