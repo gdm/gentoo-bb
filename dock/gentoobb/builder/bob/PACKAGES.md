@@ -1,10 +1,13 @@
-### gentoobb/bob:20150423
-Built: Mon Apr 27 03:01:11 CEST 2015
+### gentoobb/bob:20150604
+Built: Thu Jun 11 11:09:52 CEST 2015
 
-Image Size: 1.163 GB
+Image Size: 1.229 GB
 #### Installed
 None.
 #### Inherited
 Package | USE Flags
 --------|----------
 **FROM scratch** |
+#### Purged
+- [x] Headers
+- [x] Static Libs

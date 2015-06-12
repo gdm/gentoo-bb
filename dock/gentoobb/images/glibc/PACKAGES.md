@@ -1,7 +1,7 @@
-### gentoobb/glibc:20150507
-Built: Mon May 11 21:37:13 CEST 2015
+### gentoobb/glibc:20150604
+Built: Thu Jun 11 11:21:01 CEST 2015
 
-Image Size: 8.565 MB
+Image Size: 8.573 MB
 #### Installed
 Package | USE Flags
 --------|----------
