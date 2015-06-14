@@ -12,6 +12,7 @@ RUN chmod +x $(find /etc/service -name run) && \
 
 EXPOSE 25 587 143
 
-#CMD ["/bin/s6-svscan", "-t0", "/service"]
+VOLUME /dovecot
 
+CMD /dovecot/setup.sh && /bin/s6-svscan -t0 /service
 
