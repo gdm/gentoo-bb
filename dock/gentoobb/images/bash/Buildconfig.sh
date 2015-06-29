@@ -1,7 +1,7 @@
 #
 # build config
 #
-PACKAGES="net-misc/curl app-admin/eselect app-shells/bash"
+PACKAGES="net-misc/curl app-admin/eselect app-shells/bash sys-apps/shadow"
 
 #
 # this method runs in the bb builder container just before starting the build of the rootfs
