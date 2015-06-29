@@ -1,7 +1,7 @@
 #
 # build config
 #
-PACKAGES="sys-apps/groff app-editors/vim"
+PACKAGES="sys-apps/shadow sys-apps/groff app-editors/vim"
 #KEEP_HEADERS=true
 
 #

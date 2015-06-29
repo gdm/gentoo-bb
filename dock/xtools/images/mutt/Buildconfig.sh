@@ -2,7 +2,7 @@
 # build config
 #
 #PACKAGES="app-editors/vim app-shells/zsh sys-apps/shadow x11-wm/xpra"
-PACKAGES="app-editors/mutt"
+PACKAGES="mail-client/mutt"
 #KEEP_HEADERS=true
 
 #
@@ -12,9 +12,9 @@ configure_rootfs_build()
 {
   #  update_use '+X'
 
-    #echo 'PYTHON_TARGETS="python2_7"' >> /etc/portage/make.conf
-    #echo 'PYTHON_SINGLE_TARGET="python2_7"' >> /etc/portage/make.conf
-    #echo 'USE_PYTHON="2.7"' >> /etc/portage/make.conf
+    echo 'PYTHON_TARGETS="python2_7"' >> /etc/portage/make.conf
+    echo 'PYTHON_SINGLE_TARGET="python2_7"' >> /etc/portage/make.conf
+    echo 'USE_PYTHON="2.7"' >> /etc/portage/make.conf
     #echo 'VIDEO_CARDS="dummy fbdev"' >> /etc/portage/make.conf
    
     #update_use 'x11-wm/xpra' '-client' '+server' '+x264'
