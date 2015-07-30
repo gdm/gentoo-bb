@@ -1,7 +1,7 @@
-### gentoobb/busybox:20150423
-Built: Mon Apr 27 03:16:40 CEST 2015
+### gentoobb/busybox:20150709
+Built: Sat Jul 18 19:52:53 CEST 2015
 
-Image Size: 1.265 MB
+Image Size: 1.257 MB
 #### Installed
 Package | USE Flags
 --------|----------

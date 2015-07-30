@@ -21,5 +21,5 @@ configure_rootfs_build()
 #
 finish_rootfs_build()
 {
-    :
+    copy_gcc_libs
 }

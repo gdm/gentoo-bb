@@ -1,7 +1,7 @@
-### gentoobb/glibc:20150423
-Built: Mon Apr 27 03:21:04 CEST 2015
+### gentoobb/glibc:20150709
+Built: Sat Jul 18 19:53:45 CEST 2015
 
-Image Size: 8.573 MB
+Image Size: 8.565 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -11,6 +11,9 @@ sys-libs/timezone-data-2015b | `nls -right`
 #### Inherited
 Package | USE Flags
 --------|----------
+**FROM gentoobb/busybox** |
+sys-apps/busybox-1.23.1-r1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
+
 #### Purged
 - [x] Headers
 - [x] Static Libs
