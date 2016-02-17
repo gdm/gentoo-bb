@@ -4,7 +4,7 @@
 set -e
 
 EMERGE_ROOT="/emerge-root"
-EMERGE_BIN="${EMERGE_BIN:-emerge}"
+EMERGE_BIN="${BOB_EMERGE_BIN:-emerge}"
 EMERGE_OPT="${EMERGE_OPT:-}"
 CONFIG="/config"
 CONFIG_TMP="${CONFIG}/tmp"
@@ -34,14 +34,6 @@ copy_gcc_libs() {
     done
 }
 
-# copy glibc locale-archive from build container to custom root, locale-gen lacks support for custom ROOT
-# enables proper locale support via LANG ENV, default: en_US.UTF-8 UTF-8 incl. en_US ISO-8859-1
-# see glibc configure_bob() hook for details on how to configure different locales
-copy_locale_data() {
-    mkdir -p ${EMERGE_ROOT}/usr/lib64/locale
-    cp /usr/lib64/locale/locale-archive ${EMERGE_ROOT}/usr/lib64/locale/
-}
-
 extract_build_dependencies() {
     RESOURCE_SUFFIX="${1}"
     RESOURCE_VAR="${RESOURCE_SUFFIX}_FROM"
@@ -52,6 +44,18 @@ extract_build_dependencies() {
             fi
         done
     fi
+}
+
+# Find package version of given gentoo package atom
+#
+# Arguments:
+# 1: package_atom
+get_package_version()
+{
+    local PACKAGE="${1}"
+    exec 2>/dev/null
+    echo $(emerge -p "${PACKAGE}" | grep ${PACKAGE} | sed -e "s|${PACKAGE}-|${PACKAGE}§|" -e 's/[\s]*USE=/§USE=/g' | awk -F§ '{print $2}')
+    exec 2>&1
 }
 
 generate_documentation_footer() {
@@ -245,7 +249,7 @@ uninstall_package() {
 }
 
 install_docker_gen() {
-    local DOCKERGEN_VERSION="0.4.0"
+    local DOCKERGEN_VERSION="0.5.0"
     wget "http://github.com/jwilder/docker-gen/releases/download/${DOCKERGEN_VERSION}/docker-gen-linux-amd64-${DOCKERGEN_VERSION}.tar.gz"
     mkdir -p $EMERGE_ROOT/bin
     tar -C $EMERGE_ROOT/bin -xvzf "docker-gen-linux-amd64-${DOCKERGEN_VERSION}.tar.gz"
@@ -255,11 +259,18 @@ install_docker_gen() {
 
 install_gosu()
 {
-    local GOSU_VERSION=1.2
+    local GOSU_VERSION="1.7"
     mkdir -p ${EMERGE_ROOT}/usr/local/bin
     curl -o ${EMERGE_ROOT}/usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64"
     chmod +x ${EMERGE_ROOT}/usr/local/bin/gosu
     log_as_installed "manual install" "gosu-${GOSU_VERSION}" "https://github.com/tianon/gosu/"
+}
+
+download_from_oracle() {
+    wget --no-cookies --no-check-certificate \
+         --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
+         -P /distfiles \
+         "${1}"
 }
 
 source /etc/profile
@@ -269,8 +280,16 @@ mkdir -p $EMERGE_ROOT
 # read config, mounted via build.sh
 [[ -f ${CONFIG}/Buildconfig.sh ]] && source ${CONFIG}/Buildconfig.sh || :
 
+# use BOB_BUILDER_{CHOST,CFLAGS,CXXFLAGS}
+export USE_BUILDER_FLAGS="true"
+source /etc/profile
+
 # call configure bob hook if declared in Buildconfig.sh
 declare -F configure_bob &>/dev/null && configure_bob
+
+# switch back to BOB_{CHOST,CFLAGS,CXXFLAGS}
+unset USE_BUILDER_FLAGS
+source /etc/profile
 
 mkdir -p ${ROOTFS_BACKUP} 
 

@@ -8,12 +8,10 @@ PACKAGES="dev-java/icedtea"
 #
 configure_rootfs_build()
 {
-    echo 'PYTHON_TARGETS="python2_7 python3_4"' >> /etc/portage/make.conf
-
-    # skip python
+    update_use 'dev-java/icedtea-bin' '-webstart'
+    # skip python and nss
     provide_package dev-lang/python
-
-    update_keywords 'dev-java/icedtea' '+~amd64'
+    provide_package dev-libs/nss
 }
 
 #

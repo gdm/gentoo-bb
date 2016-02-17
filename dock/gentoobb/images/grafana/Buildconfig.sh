@@ -2,11 +2,21 @@
 # build config
 #
 PACKAGES=""
-GRAFANA_VERSION=2.0.2
+GRAFANA_VERSION="2.6.0"
 
 configure_bob()
 {
-    emerge -v go nodejs
+    # nodejs currently requires openssl with ECDH :/
+    emerge -C net-misc/openssh
+    update_use 'dev-libs/openssl' '-bindist'
+    unprovide_package 'dev-libs/openssl'
+    emerge dev-libs/openssl
+
+    # go 1.4.x will fail the build since grafana 2.6.0
+    update_keywords 'dev-lang/go' '+~amd64'
+    update_keywords 'dev-lang/go-bootstrap' '+~amd64'
+
+    emerge -v dev-lang/go net-libs/nodejs
     export DISTRIBUTION_DIR=/go/src/github.com/grafana/grafana
     mkdir -p ${DISTRIBUTION_DIR}
     export GOPATH=/go
@@ -25,13 +35,13 @@ configure_bob()
     go run build.go build
 
     npm install
-    npm install -g grunt-cli
+    npm install -g grunt-cli gyp
     #TODO: release fails due to not being able to execute phantomjs tests, figure out how to skip those for release target
     #grunt release
     grunt
 
     mkdir -p ${EMERGE_ROOT}/opt/grafana/{bin,conf,data}
-    cp -rp "${DISTRIBUTION_DIR}/public" "${EMERGE_ROOT}/opt/grafana/"
+    cp -rp "${DISTRIBUTION_DIR}/public_gen" "${EMERGE_ROOT}/opt/grafana/"
     cp "${DISTRIBUTION_DIR}/conf/defaults.ini" "${EMERGE_ROOT}/opt/grafana/conf/"
     cp "${DISTRIBUTION_DIR}/conf/sample.ini" "${EMERGE_ROOT}/opt/grafana/conf/custom.ini"
     cp ${DISTRIBUTION_DIR}/bin/* ${EMERGE_ROOT}/opt/grafana/bin
