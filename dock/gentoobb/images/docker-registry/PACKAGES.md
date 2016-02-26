@@ -1,7 +1,7 @@
-### gentoobb/docker-registry:20160115
-Built: Mon Jan 18 00:32:41 CET 2016
+### gentoobb/docker-registry:20160211
+Built: Thu Feb 25 10:03:10 CET 2016
 
-Image Size: 91.99 MB
+Image Size: 95.02 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -12,7 +12,7 @@ Package | USE Flags
 **FROM gentoobb/openssl** |
 app-misc/ca-certificates-20140927.3.17.2 | `cacert`
 app-misc/c_rehash-1.7-r1 | ``
-dev-libs/openssl-1.0.2e | `asm bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -sctp -static-libs {-test} -vanilla`
+dev-libs/openssl-1.0.2f | `asm bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -sctp -static-libs {-test} -vanilla`
 sys-apps/debianutils-4.4 | `-static`
 sys-libs/zlib-1.2.8-r1 | `-minizip -static-libs`
 **FROM gentoobb/s6** |
@@ -23,7 +23,7 @@ sys-apps/s6-2.1.3.0 | `-static`
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.10 | ``
 sys-libs/glibc-2.21-r1 | `hardened -debug -gd (-multilib) -nscd (-profile) (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015f | `nls -leaps`
+sys-libs/timezone-data-2015g | `nls -leaps`
 **FROM gentoobb/busybox** |
 sys-apps/busybox-1.24.1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
 #### Purged

@@ -1,7 +1,7 @@
-### gentoobb/python2:20160115
-Built: Mon Jan 18 01:25:57 CET 2016
+### gentoobb/python2:20160211
+Built: Mon Feb 22 02:56:13 CET 2016
 
-Image Size: 111.9 MB
+Image Size: 112.2 MB
 #### Installed
 Package | USE Flags
 --------|----------
@@ -21,7 +21,7 @@ dev-python/chardet-2.2.1 | ` `
 dev-python/colorama-0.3.3 | `-examples`
 dev-python/cryptography-1.0.2 | `(-libressl) {-test}`
 dev-python/distlib-0.2.1 | ` `
-dev-python/enum34-1.0 | `-doc`
+dev-python/enum34-1.0.4 | `-doc`
 dev-python/html5lib-0.9999999 | `{-test}`
 dev-python/idna-2.0 | ` `
 dev-python/ipaddress-1.0.14 | ` `
@@ -34,7 +34,7 @@ dev-python/progress-1.2 | ` `
 dev-python/py-1.4.30 | `-doc {-test}`
 dev-python/pyasn1-0.1.8 | `-doc`
 dev-python/pycparser-2.14 | `{-test}`
-dev-python/pyopenssl-0.14 | `-doc -examples`
+dev-python/pyopenssl-0.15.1-r1 | `-doc -examples`
 dev-python/requests-2.8.1 | `{-test}`
 dev-python/retrying-1.3.3 | ` `
 dev-python/setuptools-18.4 | `{-test}`
@@ -59,7 +59,7 @@ sys-libs/readline-6.3_p8-r2 | `-static-libs -utils`
 **FROM gentoobb/openssl** |
 app-misc/ca-certificates-20140927.3.17.2 | `cacert`
 app-misc/c_rehash-1.7-r1 | ``
-dev-libs/openssl-1.0.2e | `asm bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -sctp -static-libs {-test} -vanilla`
+dev-libs/openssl-1.0.2f | `asm bindist tls-heartbeat zlib -gmp -kerberos -rfc3779 -sctp -static-libs {-test} -vanilla`
 sys-apps/debianutils-4.4 | `-static`
 sys-libs/zlib-1.2.8-r1 | `-minizip -static-libs`
 **FROM gentoobb/s6** |
@@ -70,7 +70,7 @@ sys-apps/s6-2.1.3.0 | `-static`
 **FROM gentoobb/glibc** |
 sys-apps/gentoo-functions-0.10 | ``
 sys-libs/glibc-2.21-r1 | `hardened -debug -gd (-multilib) -nscd (-profile) (-selinux) -suid -systemtap -vanilla`
-sys-libs/timezone-data-2015f | `nls -leaps`
+sys-libs/timezone-data-2015g | `nls -leaps`
 **FROM gentoobb/busybox** |
 sys-apps/busybox-1.24.1 | `make-symlinks static -debug -ipv6 -livecd -math -mdev -pam -savedconfig (-selinux) -sep-usr -syslog -systemd`
 #### Purged
