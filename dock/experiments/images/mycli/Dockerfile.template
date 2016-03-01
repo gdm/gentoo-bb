@@ -1,0 +1,3 @@
+FROM gentoobb/python2
+ADD rootfs.tar /
+CMD ["mycli"]

@@ -1,0 +1,3 @@
+FROM gentoobb/openssl
+ADD rootfs.tar /
+CMD ["mysql"]
