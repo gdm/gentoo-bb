@@ -1,7 +1,7 @@
 #
 # build config
 #
-PACKAGES="dev-java/oracle-jdk-bin"
+PACKAGES="dev-java/oracle-jdk-bin x11-libs/libXext x11-libs/libXrender x11-libs/libXtst x11-misc/wmname x11-apps/xprop"
 
 
 
@@ -32,5 +32,5 @@ configure_rootfs_build()
 #
 finish_rootfs_build()
 {
-    :
+    copy_gcc_libs
 }
