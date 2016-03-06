@@ -249,7 +249,7 @@ uninstall_package() {
 }
 
 install_docker_gen() {
-    local DOCKERGEN_VERSION="0.5.0"
+    local DOCKERGEN_VERSION="0.6.0"
     wget "http://github.com/jwilder/docker-gen/releases/download/${DOCKERGEN_VERSION}/docker-gen-linux-amd64-${DOCKERGEN_VERSION}.tar.gz"
     mkdir -p $EMERGE_ROOT/bin
     tar -C $EMERGE_ROOT/bin -xvzf "docker-gen-linux-amd64-${DOCKERGEN_VERSION}.tar.gz"
@@ -274,6 +274,12 @@ download_from_oracle() {
 }
 
 source /etc/profile
+
+if [[ "${CHOST}" = "x86_64-pc-linux-gnu" ]]; then
+    EMERGE_BIN="emerge"
+else
+    EMERGE_BIN="emerge-${CHOST}"
+fi
 
 mkdir -p $EMERGE_ROOT
 
