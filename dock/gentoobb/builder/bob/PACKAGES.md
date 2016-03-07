@@ -1,7 +1,7 @@
-### gentoobb/bob:20160211
-Built: Fri Feb 19 13:27:13 CET 2016
+### gentoobb/bob:20160303
+Built: Sun Mar  6 22:47:03 CET 2016
 
-Image Size: 1.385 GB
+Image Size: 1.382 GB
 #### Installed
 None.
 #### Inherited
