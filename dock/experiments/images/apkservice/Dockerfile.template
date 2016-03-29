@@ -1,0 +1,6 @@
+FROM gentoobb/jdk-oracle:latest
+MAINTAINER Dmytro Gorbunov<dmitro.gorbunov@gmail.com>
+
+ADD rootfs.tar /
+
+RUN eselect java-vm set system 1

@@ -1,0 +1,11 @@
+FROM experiments/apkservice:latest
+
+MAINTAINER dmgo
+ENV uid 4000
+ENV gid 4000
+
+RUN addgroup -g $gid sgroup && mkdir -p /home && adduser -G sgroup -D -u $uid service
+
+
+USER service
+
